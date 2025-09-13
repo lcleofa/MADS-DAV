@@ -1,3 +1,5 @@
+Student: Gino Cleofa
+
 This is the repository for the Master of Applied Data Science course "Data Analysis & Visualisation", previously known as "Data Mining & Exploration". All instructions assume a UNIX machine (Linux or Os X). You should have received an invite link for a linux VM; if not, contact your teacher. On the VM, everything is installed (like uv).
 
 The manual for setting up the VM can be found in the `references` folder, in addition to a `git_crash_course` to help you work with git. Make sure to read both documents before you start asking questions about either.
