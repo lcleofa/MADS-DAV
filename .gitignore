@@ -21,3 +21,4 @@ config.toml
 data/processed/**
 dev/
 .current_values.json
+Gino_notes.md
