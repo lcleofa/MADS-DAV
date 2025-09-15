@@ -22,3 +22,6 @@ data/processed/**
 dev/
 .current_values.json
 Gino_notes.md
+app_comm_sample.py
+scratchPad.txt
+demo_apartment_community.py
