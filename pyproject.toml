@@ -1,5 +1,5 @@
 [project]
-name = "wa-analyzer"
+name = "wa-analyzer-appartment-community"
 version = "0.4.1"
 description = "Code for the Master of Applied Data Science course Data Analysis and Visualization"
 authors = [
@@ -21,6 +21,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "statsmodels>=0.14.4",
     "streamlit>=1.43.1",
+    "wa-analyzer>=0.4.1",
 ]
 readme = "README.md"
 license = {text = "MIT"}

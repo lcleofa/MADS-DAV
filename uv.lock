@@ -2404,6 +2404,25 @@ wheels = [
 [[package]]
 name = "wa-analyzer"
 version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "loguru" },
+    { name = "numpy" },
+    { name = "pandas" },
+    { name = "pyarrow" },
+    { name = "pydantic" },
+    { name = "scikit-learn" },
+    { name = "seaborn" },
+    { name = "statsmodels" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7e/4b/b7eae0b12ca520c634c6d8d31839337e2817de8c90ba23088b7162320e65/wa_analyzer-0.4.1-py3-none-any.whl", hash = "sha256:2864eb248f9a724cf55235df6d65cf6c25143f027b2be41eabaee58fd37ab4f2", size = 9722, upload-time = "2024-10-22T11:16:48.982Z" },
+]
+
+[[package]]
+name = "wa-analyzer-appartment-community"
+version = "0.4.1"
 source = { editable = "." }
 dependencies = [
     { name = "click" },
@@ -2420,6 +2439,7 @@ dependencies = [
     { name = "seaborn" },
     { name = "statsmodels" },
     { name = "streamlit" },
+    { name = "wa-analyzer" },
 ]
 
 [package.optional-dependencies]
@@ -2466,6 +2486,7 @@ requires-dist = [
     { name = "streamlit", marker = "extra == 'plotting'", specifier = ">=1.41.1" },
     { name = "torch", marker = "extra == 'huggingface'", specifier = "==2.2.2" },
     { name = "transformers", marker = "extra == 'huggingface'", specifier = ">=4.47.1" },
+    { name = "wa-analyzer", specifier = ">=0.4.1" },
 ]
 provides-extras = ["huggingface", "plotting"]
 
