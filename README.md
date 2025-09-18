@@ -1,5 +1,6 @@
 Student: Gino Cleofa<br>
 Periode A (2025/26)
+Assignment: week 3
 
 This is the repository for the Master of Applied Data Science course "Data Analysis & Visualisation" at Hogeschool Utrecht.
 The repo is forked from https://github.com/raoulg/MADS-DAV.
