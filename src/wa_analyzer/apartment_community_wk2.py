@@ -51,7 +51,7 @@ class MessageAnalysis:
         plt.ylabel("Frequency")
         plt.title(f"Flatgebouw App-groep gonst: '{self.keyword}' nieuws rond de klok")
         plt.xticks(range(0, 24))
-        save_path = self.img_dir / f"{self.keyword}_histogram_by_hour.png"
+        save_path = self.img_dir / f"{self.keyword}_histogram_by_hour_wk2.png"
         plt.savefig(save_path, bbox_inches="tight")
         plt.close()
         logger.info(f"Saved histogram plot to {save_path}")
@@ -85,7 +85,7 @@ class MessageAnalysis:
             va="center"
         )
         plt.legend()
-        save_path = self.img_dir / f"{self.keyword}_trend.png"
+        save_path = self.img_dir / f"{self.keyword}_trend_wk2.png"
         plt.savefig(save_path, bbox_inches="tight")
         plt.close()
         logger.info(f"Saved trend plot to {save_path}")
@@ -97,7 +97,7 @@ class MessageAnalysis:
         plt.xlabel("Hour of Day")
         plt.ylabel("Message Length")
         plt.title(f"De '{self.keyword}' zorgt voor golf aan berichten, en stapelt zich op!")
-        save_path = self.img_dir / f"{self.keyword}_scatter_length_vs_hour.png"
+        save_path = self.img_dir / f"{self.keyword}_scatter_length_vs_hour_wk2.png"
         plt.savefig(save_path, bbox_inches="tight")
         plt.close()
         logger.info(f"Saved scatter plot to {save_path}")
