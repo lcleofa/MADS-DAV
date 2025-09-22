@@ -12,6 +12,7 @@ The repo is forked from https://github.com/raoulg/MADS-DAV.
 - [Script usage](#script-usage)
 
 
+
 # Background
 For this course, I am analyzing a WhatsApp group export from my apartment building.<br>
 The project focuses on three main categories of discussion:
@@ -23,14 +24,15 @@ Each category is linked to a specific keyword, which serves as a parameter for t
 For example, in the Facilities category the keyword can be “lift.”
 
 # Assignments
-Weekly assignments are added to a dedicated feature branch in GitHub.
+Weekly assignments are added to a dedicated a feature branch 'hu_dav_lcleofa' in GitHub
 
-References:
-- Week 2 - feature/dav_les2
-- Week 3 - feature/dav_les3
-- Week 4 - feature/dav_les4
-- Week 5 - feature/dav_les5
-- Week 6 - feature/dav_les6
+References python scripts:
+- Week 2 - apartment_community_wk2.py
+- Week 3 - apartment_community_wk3.py
+- Week 4 - apartment_community_wk4.py
+- Week 5 - apartment_community_wk5.py
+- Week 6 - apartment_community_wk6.py
+- Week 7 - apartment_community_final.py
 
 # Project structure
 Below tree depicts relevant project files related to the assignments.<br>
@@ -63,7 +65,7 @@ Logs are saved in the `src` sub folder
 │   └── wa_analyzer
 │       ├── __init__.py
 ...
-│       ├── apartment_community.py
+│       ├── apartment_community_wk#.py
 ...
 │       ├── logs
 │       │   └── logfile.log
@@ -72,36 +74,48 @@ Logs are saved in the `src` sub folder
 ```
 
 # Script usage
-1. Make sure you have `uv` installed. You can check this by typing `which uv` in the terminal. If that doesnt return a location but `uv not found` you need to install it.<br>
+## Install uv package manager
+Make sure you have `uv` installed. You can check this by typing `which uv` in the terminal. If that doesnt return a location but `uv not found` you need to install it.<br>
 On Unix systems, you can use `curl -LsSf https://astral.sh/uv/install.sh | sh`, for Windows read the [uv documentation](https://docs.astral.sh/uv/getting-started/installation/)
 
 
-2. activate venv<br>
+## Activate venv
+Activate venv<br>
 From the root directory of the project activate and verify the `venv`:<br>
 
 ```
 (base) jdoe-MacBook-Pro:MADS-DAV jdoe$ source .venv/bin/activate
 (wa-analyzer) (base) jdoe-MacBook-Pro:MADS-DAV jdoe$
 ```
-3. Run script<br>
+## Run script
 After this, you can run the scripts with the following `command` and `keyword`, eg:
 
+### week 2
+keyword options: ["lift", "schoon", "camera"]<br>
+Example
 ```bash
-apartment_community --keyword lift
+uv run apartment_community_wk2 --keyword lift
 ```
 
-4. Logs<br>
+### week 3
+keyword options: ["lift", "schoon", "camera", "dank"],<br>
+Example
+```bash
+uv run apartment_community_wk3 --keyword schoon dank
+```
+
+
+
+## Logs
 Inside the `log` folder you will find a logfile, which has some additional information that might be useful for debugging.<br>
 For logfile folder location see section 'Project structure'. <br>
 The logging is also printed on the terminal output.
 
-5. Images<br>
+## Images
 Inside the `img` folder you will find the saved images after each run prefixed by the keyword.<br>
 For image folder location see section 'Project structure'. <br>
-The images depicts following analyses themes
-- Trend line for total messages over the years, dutch title:<br> `'keyword' gesprekken door de jaren heen`.
-- Histogram of message on hours per day, dutch title:<br> `Flatgebouw App-groep gonst: 'keyword' nieuws rond de klok`.
-- Scatter plot to correlate message length vs timestamp, dutch title:<br> `De 'keyword' zorgt voor golf aan berichten, en stapelt zich op!`
+The images depicts following analyses themes. The images are referenced to the week of the assignments.
+
 
 
 
