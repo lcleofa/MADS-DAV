@@ -1,6 +1,6 @@
 Student: Gino Cleofa<br>
-Periode A (2025/26)
-Assignment: week 3
+Periode A (2025/26)<br>
+Weekly assignments are added to dedicated feature branch 'hu_dav_lcleofa' in GitHub.
 
 This is the repository for the Master of Applied Data Science course "Data Analysis & Visualisation" at Hogeschool Utrecht.
 The repo is forked from https://github.com/raoulg/MADS-DAV.
@@ -24,15 +24,18 @@ Each category is linked to a specific keyword, which serves as a parameter for t
 For example, in the Facilities category the keyword can be “lift.”
 
 # Assignments
-Weekly assignments are added to a dedicated a feature branch 'hu_dav_lcleofa' in GitHub
 
 References python scripts:
-- Week 2 - apartment_community_wk2.py
-- Week 3 - apartment_community_wk3.py
-- Week 4 - apartment_community_wk4.py
-- Week 5 - apartment_community_wk5.py
-- Week 6 - apartment_community_wk6.py
-- Week 7 - apartment_community_final.py
+
+| Week | Topic / Focus            | Script                          |
+|------|---------------------------|---------------------------------|
+| 2    | Comparing categories      | apartment_community_wk2.py      |
+| 3    | Time                      | apartment_community_wk3.py      |
+| 4    | —                         | apartment_community_wk4.py      |
+| 5    | —                         | apartment_community_wk5.py      |
+| 6    | —                         | apartment_community_wk6.py      |
+| 7    | Final                     | apartment_community_final.py    |
+
 
 # Project structure
 Below tree depicts relevant project files related to the assignments.<br>
