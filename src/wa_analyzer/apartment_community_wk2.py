@@ -78,7 +78,7 @@ class MessageAnalysis:
         avg_count = trend_df["count"].mean()
         plt.axhline(y=avg_count, color="blue", linestyle="--", linewidth=1.5, label=f"Average ({avg_count:.1f})")
         plt.annotate(
-            f"Peak: {max_count} messages on {max_date}",
+            f"Peak: Lift deurdrangers vervangen on {max_date}",
             xy=(max_row["timestamp"], max_count),
             xytext=(max_row["timestamp"] + pd.Timedelta(days=7), max_count),
             arrowprops=dict(arrowstyle="->", color="red"),
