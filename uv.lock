@@ -2465,6 +2465,7 @@ version = "0.4.1"
 source = { editable = "." }
 dependencies = [
     { name = "duckdb" },
+    { name = "mads-datasets" },
     { name = "nltk" },
     { name = "textblob" },
     { name = "textblob-nl" },
@@ -2496,6 +2497,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "duckdb", specifier = ">=1.3.2" },
+    { name = "mads-datasets", specifier = ">=0.3.14" },
     { name = "mads-datasets", marker = "extra == 'plotting'", specifier = ">=0.3.14" },
     { name = "nltk", specifier = ">=3.9.1" },
     { name = "plotly", marker = "extra == 'plotting'", specifier = ">=5.24.1" },

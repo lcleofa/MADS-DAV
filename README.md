@@ -104,10 +104,8 @@ uv run apartment_community_wk2 --keyword lift
 keyword options: ["lift", "schoon", "camera", "dank"],<br>
 Example
 ```bash
-uv run apartment_community_wk3 --keyword schoon dank
+uv run apartment_community_wk3
 ```
-
-
 
 ## Logs
 Inside the `log` folder you will find a logfile, which has some additional information that might be useful for debugging.<br>
