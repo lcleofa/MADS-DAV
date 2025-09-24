@@ -135,7 +135,7 @@ class CameraAnalysis:
         if save_dir:
             save_dir.mkdir(parents=True, exist_ok=True)
             # file_path = save_dir / f"sentiment_plot_{'_'.join(self.keywords)}_wk3.png"
-            file_path = save_dir / f"camerabeveiliging_{'_'.join(self.keywords)}_wk3.png"
+            file_path = save_dir / f"beveiliging_{'_'.join(self.keywords)}_wk3.png"
 
             plt.savefig(file_path, dpi=300)
             logger.info(f"Plot saved to {file_path}")

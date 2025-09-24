@@ -23,18 +23,19 @@ The project focuses on three main categories of discussion:
 Each category is linked to a specific keyword, which serves as a parameter for the analysis script.<br>
 For example, in the Facilities category the keyword can be “lift.”
 
+
 # Assignments
 
 References python scripts:
 
-| Week | Topic / Focus            | Script                          |
-|------|---------------------------|---------------------------------|
-| 2    | Comparing categories      | apartment_community_wk2.py      |
-| 3    | Time                      | apartment_community_wk3.py      |
-| 4    | —                         | apartment_community_wk4.py      |
-| 5    | —                         | apartment_community_wk5.py      |
-| 6    | —                         | apartment_community_wk6.py      |
-| 7    | Final                     | apartment_community_final.py    |
+| Week | Subject       | Script                        | Image |
+|------|--------------------|-------------------------------|-------|
+| 2    | Comparing categories| apartment_community_wk2.py    |   lift_trend_wk2.png    |
+| 3    | Time               | apartment_community_wk3.py    |   beveiliging_camera_wk3.png    |
+| 4    | —                  | apartment_community_wk4.py    |       |
+| 5    | —                  | apartment_community_wk5.py    |       |
+| 6    | —                  | apartment_community_wk6.py    |       |
+| 7    | Final              | apartment_community_final.py  |       |
 
 
 # Project structure
