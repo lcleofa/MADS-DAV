@@ -36,8 +36,7 @@ class LoggerSetup:
             level="DEBUG",
             enqueue=True
         )
-        return logger
-        
+        return logger       
 class CameraAnalysis:
     """Analyze messages containing 'camera' and plot results."""
     def __init__(self, df: pd.DataFrame, keywords: list[str] = ["camera"]):
@@ -91,7 +90,7 @@ class CameraAnalysis:
         # Line plot
         ax.plot(series.index, series.values, marker="o", linestyle="-", color="orange")
         ax.set_title(
-        "Na lange discussies in flatgebouw geven leden alsnog snel groen licht voor camerabeveiliging",
+        "Na lange discussies in flatgebouw geven leden alsnog groen licht voor camerabeveiliging",
         fontsize=14,
         fontweight="bold"
 )
@@ -134,8 +133,7 @@ class CameraAnalysis:
         # Save plot if save_dir is provided
         if save_dir:
             save_dir.mkdir(parents=True, exist_ok=True)
-            # file_path = save_dir / f"sentiment_plot_{'_'.join(self.keywords)}_wk3.png"
-            file_path = save_dir / f"beveiliging_{'_'.join(self.keywords)}_wk3.png"
+            file_path = save_dir / f"wk3_beveiliging_{'_'.join(self.keywords)}_time.png"
 
             plt.savefig(file_path, dpi=300)
             logger.info(f"Plot saved to {file_path}")

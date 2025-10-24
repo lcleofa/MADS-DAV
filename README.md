@@ -30,11 +30,11 @@ References python scripts:
 
 | Week | Subject       | Script                        | Image |
 |------|--------------------|-------------------------------|-------|
-| 2    | Comparing categories| apartment_community_wk2.py    |   lift_trend_wk2.png    |
-| 3    | Time               | apartment_community_wk3.py    |   beveiliging_camera_wk3.png    |
-| 4    | —                  | apartment_community_wk4.py    |       |
-| 5    | —                  | apartment_community_wk5.py    |       |
-| 6    | —                  | apartment_community_wk6.py    |       |
+| 2    | Comparing categories| apartment_community_wk2.py    |   wk2_lift_gesprekken_comparing_categories.png    |
+| 3    | Time               | apartment_community_wk3.py    |   wk3_beveiliging_camera_time.png    |
+| 4    | —                  | apartment_community_wk4.py    |    wk4_log_berichtlengtes_distributions.png   |
+| 5    | —                  | apartment_community_wk5.py    |     wk5_aantal_berichten_per_etage_relationship.png  |
+| 6    | —                  | apartment_community_wk6.py    |      wk6_pca_modelling_gender_highlighted.png |
 | 7    | Final              | apartment_community_final.py  |       |
 
 
@@ -55,9 +55,9 @@ Logs are saved in the `src` sub folder
 ├── dev
 ├── dist
 ├── img
-│   ├── lift_histogram_by_hour.png
-│   ├── lift_scatter_length_vs_hour.png
-│   ├── lift_trend.png
+│   ├── wk2_lift_gesprekken_comparing_categories.png
+│   ├── wk3_beveiliging_camera_time.png
+│   ├── ...
 ├── notebooks
 │   ├── 01-cleaning.ipynb
 │   ├── 02-Gino-comparing_categories.ipynb
@@ -106,6 +106,21 @@ keyword options: ["lift", "schoon", "camera", "dank"],<br>
 Example
 ```bash
 uv run apartment_community_wk3
+```
+
+### week 4
+```
+uv run apartment_community_wk4 --top 5
+```
+
+### week 5
+```
+uv run  apartment_community_wk5 --keyword lift
+```
+
+### week 6
+```
+uv run  apartment_community_wk6 --label Gender --keywords lift camera trap ventilatie
 ```
 
 ## Logs
