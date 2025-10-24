@@ -1,62 +1,141 @@
-This is the repository for the Master of Applied Data Science course "Data Analysis & Visualisation", previously known as "Data Mining & Exploration". All instructions assume a UNIX machine (Linux or Os X). You should have received an invite link for a linux VM; if not, contact your teacher. On the VM, everything is installed (like uv).
+Student: Gino Cleofa<br>
+Periode A (2025/26)<br>
+Weekly assignments are added to dedicated feature branch 'hu_dav_lcleofa' in GitHub.
 
-The manual for setting up the VM can be found in the `references` folder, in addition to a `git_crash_course` to help you work with git. Make sure to read both documents before you start asking questions about either.
+This is the repository for the Master of Applied Data Science course "Data Analysis & Visualisation" at Hogeschool Utrecht.<br>
+The repo is forked from https://github.com/raoulg/MADS-DAV.
+
+# Table of Contents
+- [Background](#background)
+- [Assignments](#assignments)
+- [Project structure](#project-structure)
+- [Script usage](#script-usage)
 
 
-# Setup the virtual environment
-1. Make sure you have `uv` installed. You can check this by typing `which uv` in the terminal. If that doesnt return a location but `uv not found` you need to install it.On Unix systems, you can use `curl -LsSf https://astral.sh/uv/install.sh | sh`, for Windows read the [uv documentation](https://docs.astral.sh/uv/getting-started/installation/)
-2. if the `MADS-DAV` folder isnt already cloned with git, add it with the command `git clone https://github.com/raoulg/MADS-DAV.git`
-3. Navigate to the MADS-DAV folder where the `pyproject.toml` is located with `cd MADS-DAV` and run `uv sync --all-extras`. This should create a virtual environment (a .venv folder) and install all dependencies there.
-4. Read through the [uv docs](https://docs.astral.sh/uv/guides/projects/) "working on projects" intro into `uv`
 
-# Run the preprocessor
-Copy the `config.example.toml` file to a `config.toml` file. Update the contents after running the preprocessor.
-Download a chat from Whatsapp and put it in the `data/raw` folder. Rename the file to `_chat.txt` (or change the `config.toml` file). 
+# Background
+For this course, I am analyzing a WhatsApp group export from my apartment building.<br>
+The project focuses on three main categories of discussion:
+- Facilities
+- Hygiene
+- Security
 
-# NOTE
-If you want to use my code in your own repo, do not copy paste everything. Instead, install it as a package; I published it on [pypi](https://pypi.org/project/wa-analyzer/) so simply do `uv add wa-analyzer`.
+Each category is linked to a specific keyword, which serves as a parameter for the analysis script.<br>
+For example, in the Facilities category the keyword can be “lift.”
 
-This preprocesser uses the datetime module to convert strings with a date and / or time into datetime objects. The preprocessor needs to know the formatting of the timestamps in your `_chat.txt` file. Therefore, you might need to update the `datetime_format` variable in the `config.toml` file accordingly. You can find the formatting in the [documentation](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) of the datetime module.
 
-Now you can run the following command to activate the virtual environment you have created in the previous step.
+# Assignments
 
+References python scripts:
+
+| Week | Subject       | Script                        | Image |
+|------|--------------------|-------------------------------|-------|
+| 2    | Comparing categories| apartment_community_wk2.py    |   wk2_lift_gesprekken_comparing_categories.png    |
+| 3    | Time               | apartment_community_wk3.py    |   wk3_beveiliging_camera_time.png    |
+| 4    | —                  | apartment_community_wk4.py    |    wk4_log_berichtlengtes_distributions.png   |
+| 5    | —                  | apartment_community_wk5.py    |     wk5_aantal_berichten_per_etage_relationship.png  |
+| 6    | —                  | apartment_community_wk6.py    |      wk6_pca_modelling_gender_highlighted.png |
+| 7    | Final              | apartment_community_final.py  |       |
+
+
+# Project structure
+Below tree depicts relevant project files related to the assignments.<br>
+The main. script is `apartment_community.py`<br>
+Generated images are saved in the `img` folder.<br>
+Logs are saved in the `src` sub folder
+
+```
+.
+├── README.md
+├── checklist.md
+├── config.example.toml
+├── config.toml
+├── dashboards
+├── data
+├── dev
+├── dist
+├── img
+│   ├── wk2_lift_gesprekken_comparing_categories.png
+│   ├── wk3_beveiliging_camera_time.png
+│   ├── ...
+├── notebooks
+│   ├── 01-cleaning.ipynb
+│   ├── 02-Gino-comparing_categories.ipynb
+...
+├── presentations
+├── pyproject.toml
+├── references
+├── src
+│   └── wa_analyzer
+│       ├── __init__.py
+...
+│       ├── apartment_community_wk#.py
+...
+│       ├── logs
+│       │   └── logfile.log
+...
+
+```
+
+# Script usage
+## Install uv package manager
+Make sure you have `uv` installed. You can check this by typing `which uv` in the terminal. If that doesnt return a location but `uv not found` you need to install it.<br>
+On Unix systems, you can use `curl -LsSf https://astral.sh/uv/install.sh | sh`, for Windows read the [uv documentation](https://docs.astral.sh/uv/getting-started/installation/)
+
+
+## Activate venv
+Activate venv<br>
+From the root directory of the project activate and verify the `venv`:<br>
+
+```
+(base) jdoe-MacBook-Pro:MADS-DAV jdoe$ source .venv/bin/activate
+(wa-analyzer) (base) jdoe-MacBook-Pro:MADS-DAV jdoe$
+```
+## Run script
+After this, you can run the scripts with the following `command` and `keyword`, eg:
+
+### week 2
+keyword options: ["lift", "schoon", "camera"]<br>
+Example
 ```bash
-source .venv/bin/activate
+uv run apartment_community_wk2 --keyword lift
 ```
 
-You can check which python is being used by running:
+### week 3
+keyword options: ["lift", "schoon", "camera", "dank"],<br>
+Example
 ```bash
-which python
+uv run apartment_community_wk3
 ```
 
-This should now return a path that includes the `.venv` folder in your project.
-After this, you can run the preprocessor with the following command:
-
-```bash
-analyzer --device ios
+### week 4
 ```
-Change `ios` to `android` if you have an android device.
-This will run the `src/wa_analyzer.py:main` method, which will process the chat and save the results in the `data/processed` folder.
-
-You should see some logs, like this:
-```
-2024-02-11 16:07:19.191 | INFO     | __main__:main:71 - Using iOS regexes
-2024-02-11 16:07:19.201 | INFO     | __main__:process:61 - Found 1779 records
-2024-02-11 16:07:19.201 | INFO     | __main__:process:62 - Appended 152 records
-2024-02-11 16:07:19.202 | INFO     | __main__:save:30 - Writing to data/processed/whatsapp-20240211-160719.csv
-2024-02-11 16:07:19.206 | SUCCESS  | __main__:save:32 - Done!
+uv run apartment_community_wk4 --top 5
 ```
 
-Inside the `log` folder you will find a logfile, which has some additional information that might be useful for debugging.
+### week 5
+```
+uv run  apartment_community_wk5 --keyword lift
+```
 
-After this, put the name of the .csv file that is save to `inputpath` in the `config.toml` file.
-You can then run the `01-cleaning.ipynb` notebook. This will save a cleaned `.parq` file. Put the name of that file after the `current` key in the `config.toml` file.
+### week 6
+```
+uv run  apartment_community_wk6 --label Gender --keywords lift camera trap ventilatie
+```
 
-This `config.toml` file should make it easier to run the code with multiple input files; you can simply change the `current` value and run all notebooks for the file specified there.
+## Logs
+Inside the `log` folder you will find a logfile, which has some additional information that might be useful for debugging.<br>
+For logfile folder location see section 'Project structure'. <br>
+The logging is also printed on the terminal output.
 
-## codestyle
-During the course, you will continue to improve your coding skills. 
-Use the [codestyle](https://github.com/raoulg/codestyle) repo as a reference!
+## Images
+Inside the `img` folder you will find the saved images after each run prefixed by the keyword.<br>
+For image folder location see section 'Project structure'. <br>
+The images depicts following analyses themes. The images are referenced to the week of the assignments.
+
+
+
+
 
 
 
